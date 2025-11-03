@@ -5,7 +5,7 @@ public class SistemaRU {
         Scanner sc = new Scanner(System.in);
         CardapioSemanal cardapio = new CardapioSemanal();
 
-        System.out.println("=== 🍽️ Sistema do RU - Cadastro de Cardápio ===");
+        System.out.println("=== Sistema do RU - Cadastro de Cardápio ===");
 
         boolean continuar = true;
         while (continuar) {
@@ -15,7 +15,6 @@ public class SistemaRU {
             System.out.print("Digite o turno (Almoço ou Jantar):");
             String turno = sc.nextLine();
 
-            // Cadastrar os alimentos da refeição
             System.out.print("Informe o nome da salada:");
             Alimento salada = new Alimento(sc.nextLine());
 
@@ -25,16 +24,13 @@ public class SistemaRU {
             System.out.print("Informe o acompanhamento:");
             Alimento acomp = new Alimento(sc.nextLine());
 
-            // Criar refeição e menu
             Refeicao refeicao = new Refeicao(salada, prato, acomp);
             Menu menu = new Menu(dia, turno, refeicao);
 
-            // Adicionar ao cardápio
             cardapio.adicionarMenu(menu);
 
             System.out.println("\n✅ Menu adicionado com sucesso!");
 
-            // Perguntar se deseja continuar
             System.out.print("\nDeseja cadastrar outro menu? (s/n)");
             String resposta = sc.nextLine();
 

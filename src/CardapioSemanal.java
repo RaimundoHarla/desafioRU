@@ -8,12 +8,10 @@ public class CardapioSemanal {
         this.menus = new ArrayList<>();
     }
 
-    // Adiciona um menu (um dia e turno)
     public void adicionarMenu(Menu menu) {
         menus.add(menu);
     }
 
-    // Exibe o cardápio completo
     public void exibirCardapio() {
         System.out.println("=== 🍽️ CARDÁPIO SEMANAL DO RU ===");
         for (Menu menu : menus) {
